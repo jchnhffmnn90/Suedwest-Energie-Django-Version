@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Kontakt | Südwest Energie{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="bg-primary text-white py-5">
+    <div class="container py-5 text-center">
+        <h1 class="display-4 fw-bold mb-3">Kontaktieren Sie uns</h1>
+        <p class="lead text-white-50 mx-auto" style="max-width: 700px;">
+            Wir freuen uns auf Ihre Anfrage. Starten Sie jetzt Ihre Energiekostenoptimierung.
+        </p>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        
+        <!-- Feedback Messages -->
+        {% if messages %}
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-10">
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show shadow-sm" role="alert">
+                            {% if message.tags == 'success' %}
+                                <i class="fas fa-check-circle me-2"></i>
+                            {% else %}
+                                <i class="fas fa-exclamation-circle me-2"></i>
+                            {% endif %}
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-lg-5">
+                <h3 class="fw-bold mb-4">Hier finden Sie uns</h3>
+                <p class="text-muted mb-5">
+                    Haben Sie Fragen zu unseren Leistungen oder wünschen Sie eine individuelle Beratung? Rufen Sie uns an oder schreiben Sie uns.
+                </p>
+
+                <div class="d-flex mb-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
+                            <i class="fas fa-map-marker-alt fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="ms-4">
+                        <h5 class="fw-bold">Anschrift</h5>
+                        <p class="text-muted mb-0">
+                            Thomke & THomke GbR<br>
+                            Im unteren Ried 15<br>
+                            75382 Althengstett
+                        </p>
+                    </div>
+                </div>
+
+                <div class="d-flex mb-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
+                            <i class="fas fa-phone fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="ms-4">
+                        <h5 class="fw-bold">Telefon</h5>
+                        <p class="text-muted mb-0">
+                            <a href="tel:+4917613427945" class="text-decoration-none text-muted">0176 / 134 27 945</a>
+                        </p>
+                        <small class="text-muted">Mo-Fr: 09:00 - 17:00 Uhr</small>
+                    </div>
+                </div>
+
+                <div class="d-flex mb-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle text-primary">
+                            <i class="fas fa-envelope fa-lg"></i>
+                        </div>
+                    </div>
+                    <div class="ms-4">
+                        <h5 class="fw-bold">E-Mail</h5>
+                        <p class="text-muted mb-0">
+                            <a href="mailto:kontakt@suedwest-energie.de" class="text-decoration-none text-muted">kontakt@suedwest-energie.de</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-7">
+                <div class="bg-light-subtle p-5 rounded-4 shadow-sm border">
+                    <h3 class="fw-bold mb-4">Nachricht senden</h3>
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="{{ form.name.id_for_label }}" class="form-label fw-bold small text-muted">{{ form.name.label }}</label>
+                                {{ form.name }}
+                                {% if form.name.errors %}
+                                    <div class="text-danger small mt-1">{{ form.name.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6">
+                                <label for="{{ form.contact_person.id_for_label }}" class="form-label fw-bold small text-muted">{{ form.contact_person.label }}</label>
+                                {{ form.contact_person }}
+                                {% if form.contact_person.errors %}
+                                    <div class="text-danger small mt-1">{{ form.contact_person.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6">
+                                <label for="{{ form.email.id_for_label }}" class="form-label fw-bold small text-muted">{{ form.email.label }}</label>
+                                {{ form.email }}
+                                {% if form.email.errors %}
+                                    <div class="text-danger small mt-1">{{ form.email.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-6">
+                                <label for="{{ form.phone.id_for_label }}" class="form-label fw-bold small text-muted">{{ form.phone.label }}</label>
+                                {{ form.phone }}
+                                {% if form.phone.errors %}
+                                    <div class="text-danger small mt-1">{{ form.phone.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <label for="{{ form.message.id_for_label }}" class="form-label fw-bold small text-muted">{{ form.message.label }}</label>
+                                {{ form.message }}
+                                {% if form.message.errors %}
+                                    <div class="text-danger small mt-1">{{ form.message.errors.0 }}</div>
+                                {% endif %}
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill shadow-sm">Absenden</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Placeholder -->
+<section class="bg-light" style="height: 400px; background: url('https://maps.googleapis.com/maps/api/staticmap?center=Althengstett&zoom=13&size=1200x400&sensor=false') center/cover no-repeat;">
+    <div class="w-100 h-100 bg-dark bg-opacity-10 d-flex align-items-center justify-content-center">
+        <a href="https://www.google.com/maps/search/?api=1&query=Im+unteren+Ried+15+75382+Althengstett" target="_blank" class="btn btn-light shadow fw-bold">
+            <i class="fas fa-map-marked-alt me-2"></i> Auf Google Maps anzeigen
+        </a>
+    </div>
+</section>
+
+{% endblock %}

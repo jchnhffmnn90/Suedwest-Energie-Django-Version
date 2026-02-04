@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Ablauf | Südwest Energie{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+<section class="bg-light-subtle py-5">
+    <div class="container py-5 text-center">
+        <h1 class="display-4 fw-bold mb-3">So einfach wechseln Sie</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 700px;">
+            Wir machen den Anbieterwechsel und die Optimierung für Sie stressfrei.
+        </p>
+    </div>
+</section>
+
+<!-- Timeline -->
+<section class="section-padding position-relative">
+    <div class="container">
+        <!-- Connecting Line (Desktop) -->
+        <div class="position-absolute start-50 top-0 bottom-0 border-start border-2 border-primary opacity-10 d-none d-lg-block" style="transform: translateX(-50%);"></div>
+
+        <!-- Step 1 -->
+        <div class="row align-items-center mb-5 position-relative">
+            <div class="col-lg-6 text-lg-end pe-lg-5">
+                <h3 class="fw-bold text-primary">1. Bestandsaufnahme</h3>
+                <p class="text-muted">Sie senden uns Ihre letzte Jahresabrechnung oder Ihren aktuellen Lastgang. Wir analysieren Ihren Status Quo, Kündigungsfristen und Einsparpotenziale.</p>
+            </div>
+            <div class="col-lg-6 ps-lg-5 mt-4 mt-lg-0">
+                <div class="d-flex align-items-center">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold fs-3 shadow" style="width: 60px; height: 60px; position: absolute; left: 50%; transform: translateX(-50%); z-index: 2;">1</div>
+                    <div class="card border-0 shadow-sm p-4 w-100 bg-light-subtle">
+                        <i class="fas fa-file-invoice fa-2x text-primary mb-3"></i>
+                        <p class="mb-0 small fw-bold">Benötigte Unterlagen:</p>
+                        <ul class="mb-0 small text-muted ps-3">
+                            <li>Letzte Strom-/Gasrechnung</li>
+                            <li>Ggf. bestehender Vertrag</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="row align-items-center mb-5 position-relative">
+            <div class="col-lg-6 order-lg-2 ps-lg-5">
+                <h3 class="fw-bold text-primary">2. Marktausschreibung</h3>
+                <p class="text-muted">Wir schreiben Ihren Bedarf anonymisiert am Markt aus. Über 100 Versorger konkurrieren um Ihren Auftrag. Wir filtern die Angebote nach Preis, Bonität und Vertragsbedingungen.</p>
+            </div>
+            <div class="col-lg-6 order-lg-1 pe-lg-5 mt-4 mt-lg-0 text-lg-end">
+                <div class="d-flex align-items-center justify-content-end">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold fs-3 shadow" style="width: 60px; height: 60px; position: absolute; left: 50%; transform: translateX(-50%); z-index: 2;">2</div>
+                    <div class="card border-0 shadow-sm p-4 w-100 bg-light-subtle text-start">
+                        <i class="fas fa-bullhorn fa-2x text-primary mb-3"></i>
+                        <p class="mb-0 small fw-bold">Unser Vorteil:</p>
+                        <ul class="mb-0 small text-muted ps-3">
+                            <li>Zugang zu Großhandelspreisen</li>
+                            <li>Keine versteckten Gebühren</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="row align-items-center mb-5 position-relative">
+            <div class="col-lg-6 text-lg-end pe-lg-5">
+                <h3 class="fw-bold text-primary">3. Entscheidung & Wechsel</h3>
+                <p class="text-muted">Sie erhalten von uns einen transparenten Vergleich. Sie entscheiden, wir kümmern uns um den Rest: Kündigung beim Altanbieter und Anmeldung beim neuen Versorger.</p>
+            </div>
+            <div class="col-lg-6 ps-lg-5 mt-4 mt-lg-0">
+                <div class="d-flex align-items-center">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold fs-3 shadow" style="width: 60px; height: 60px; position: absolute; left: 50%; transform: translateX(-50%); z-index: 2;">3</div>
+                    <div class="card border-0 shadow-sm p-4 w-100 bg-light-subtle">
+                        <i class="fas fa-signature fa-2x text-primary mb-3"></i>
+                        <p class="mb-0 small fw-bold">Risikofrei:</p>
+                        <p class="small text-muted mb-0">Die Versorgungssicherheit ist gesetzlich jederzeit garantiert.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="row align-items-center position-relative">
+            <div class="col-lg-6 order-lg-2 ps-lg-5">
+                <h3 class="fw-bold text-success">4. Laufende Betreuung</h3>
+                <p class="text-muted">Auch nach dem Wechsel sind wir für Sie da. Wir prüfen Ihre Rechnungen, überwachen Fristen und informieren Sie proaktiv über günstige Marktphasen für Folgeverträge.</p>
+            </div>
+            <div class="col-lg-6 order-lg-1 pe-lg-5 mt-4 mt-lg-0 text-lg-end">
+                <div class="d-flex align-items-center justify-content-end">
+                    <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold fs-3 shadow" style="width: 60px; height: 60px; position: absolute; left: 50%; transform: translateX(-50%); z-index: 2;"><i class="fas fa-check"></i></div>
+                    <div class="card border-0 shadow-sm p-4 w-100 bg-success bg-opacity-10 text-start">
+                        <i class="fas fa-infinity fa-2x text-success mb-3"></i>
+                        <p class="mb-0 small fw-bold">Full Service:</p>
+                        <p class="small text-muted mb-0">Ihr persönlicher Ansprechpartner bleibt dauerhaft für Sie erreichbar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
