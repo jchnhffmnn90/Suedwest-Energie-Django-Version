@@ -59,3 +59,12 @@ def contact(request):
         form = ContactForm()
 
     return render(request, 'contact.html', {'form': form})
+
+def imprint(request):
+    return render(request, 'home.html') # Placeholder, reusing home for now
+
+def privacy(request):
+    return render(request, 'home.html') # Placeholder, reusing home for now
+
+def terms(request):
+    return render(request, 'home.html') # Placeholder, reusing home for now
