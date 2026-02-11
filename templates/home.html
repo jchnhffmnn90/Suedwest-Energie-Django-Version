@@ -3,34 +3,39 @@
 {% block content %}
 
 <!-- Hero Section -->
-<section class="section-padding position-relative overflow-hidden bg-gradient-primary text-white" style="background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 100%);">
+<section class="section-padding position-relative overflow-hidden bg-gradient-primary text-white"
+  style="background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 100%);">
   <!-- Abstract Background Element (Subtle Glow) -->
   <div class="position-absolute top-0 end-0 translate-middle-y opacity-10" style="z-index: 0; filter: blur(80px);">
-      <div style="width: 600px; height: 600px; background: var(--brand-green); border-radius: 50%;"></div>
+    <div style="width: 600px; height: 600px; background: var(--brand-green); border-radius: 50%;"></div>
   </div>
 
   <div class="container position-relative" style="z-index: 1;">
     <div class="row align-items-center py-5">
       <div class="col-lg-8 mx-auto text-center reveal active">
-        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-white bg-opacity-10 text-white fw-semibold mb-4 border border-white border-opacity-25 shadow-sm">
+        <div
+          class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill bg-white bg-opacity-10 text-white fw-semibold mb-4 border border-white border-opacity-25 shadow-sm">
           <i class="fas fa-check-circle text-accent"></i> Unabhängige Energieberatung
         </div>
         <h1 class="display-3 fw-bold mb-4 lh-tight text-white">
           Strategische Energieoptimierung für den <span class="text-accent">Mittelstand</span>
         </h1>
         <p class="lead text-white-50 mb-5 px-lg-5">
-          Senken Sie Ihre Betriebskosten nachhaltig. Wir analysieren, vergleichen und optimieren Ihre Energiebeschaffung in ganz Deutschland – transparent, unabhängig und erfolgsorientiert.
+          Senken Sie Ihre Betriebskosten nachhaltig. Wir analysieren, vergleichen und optimieren Ihre Energiebeschaffung
+          in ganz Deutschland – transparent, unabhängig und erfolgsorientiert.
         </p>
         <div class="d-flex justify-content-center gap-3 flex-column flex-sm-row">
-          <a href="{% url 'contact' %}" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg fw-bold border-0 text-white">
+          <a href="{% url 'contact' %}"
+            class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg fw-bold border-0 text-white">
             Kostenlose Analyse anfordern
           </a>
           <a href="{% url 'services' %}" class="btn btn-outline-light btn-lg rounded-pill px-5">
             Leistungen entdecken
           </a>
         </div>
-        
-        <div class="row mt-5 pt-4 border-top border-white border-opacity-10 g-4 justify-content-center reveal reveal-delay-2">
+
+        <div
+          class="row mt-5 pt-4 border-top border-white border-opacity-10 g-4 justify-content-center reveal reveal-delay-2">
           <div class="col-auto">
             <div class="d-flex align-items-center gap-2 text-white-50">
               <i class="fas fa-chart-line text-accent fs-4"></i>
@@ -38,7 +43,7 @@
             </div>
           </div>
           <div class="col-auto">
-             <div class="vr h-100 mx-2 d-none d-sm-block bg-white opacity-25"></div>
+            <div class="vr h-100 mx-2 d-none d-sm-block bg-white opacity-25"></div>
           </div>
           <div class="col-auto">
             <div class="d-flex align-items-center gap-2 text-white-50">
@@ -47,7 +52,7 @@
             </div>
           </div>
           <div class="col-auto">
-             <div class="vr h-100 mx-2 d-none d-sm-block bg-white opacity-25"></div>
+            <div class="vr h-100 mx-2 d-none d-sm-block bg-white opacity-25"></div>
           </div>
           <div class="col-auto">
             <div class="d-flex align-items-center gap-2 text-white-50">
@@ -69,7 +74,8 @@
         <h6 class="text-accent fw-bold text-uppercase mb-2">Über Südwest Energie</h6>
         <h2 class="fw-bold mb-4 text-dark">Ihr Vorteil durch Unabhängigkeit.</h2>
         <p class="text-muted mb-4">
-          Wir arbeiten nicht für Versorger, sondern für Sie. Unsere Marktkenntnis sichert Ihnen Konditionen, die sonst nur Großkonzernen vorbehalten sind.
+          Wir arbeiten nicht für Versorger, sondern für Sie. Unsere Marktkenntnis sichert Ihnen Konditionen, die sonst
+          nur Großkonzernen vorbehalten sind.
         </p>
         <a href="{% url 'about' %}" class="btn btn-link text-decoration-none p-0 fw-semibold text-accent">
           Mehr über uns erfahren <i class="fas fa-arrow-right ms-1"></i>
@@ -77,20 +83,20 @@
       </div>
       <div class="col-lg-7">
         <div class="row g-4">
-             <div class="col-md-6 reveal reveal-delay-1">
-                 <div class="p-4 bg-white rounded-4 shadow-sm border h-100 hover-lift">
-                     <i class="fas fa-balance-scale fa-2x text-primary mb-3"></i>
-                     <h5 class="fw-bold">Objektiver Vergleich</h5>
-                     <p class="text-muted small mb-0">Wir prüfen den gesamten Markt nach Ihren Kriterien.</p>
-                 </div>
-             </div>
-             <div class="col-md-6 reveal reveal-delay-2">
-                 <div class="p-4 bg-white rounded-4 shadow-sm border h-100 hover-lift">
-                     <i class="fas fa-hand-holding-usd fa-2x text-success mb-3"></i>
-                     <h5 class="fw-bold">Maximale Ersparnis</h5>
-                     <p class="text-muted small mb-0">Durch Bündelung und Timing erzielen wir Bestpreise.</p>
-                 </div>
-             </div>
+          <div class="col-md-6 reveal reveal-delay-1">
+            <div class="p-4 bg-white rounded-4 shadow-sm border h-100 hover-lift">
+              <i class="fas fa-balance-scale fa-2x text-primary mb-3"></i>
+              <h5 class="fw-bold">Objektiver Vergleich</h5>
+              <p class="text-muted small mb-0">Wir prüfen den gesamten Markt nach Ihren Kriterien.</p>
+            </div>
+          </div>
+          <div class="col-md-6 reveal reveal-delay-2">
+            <div class="p-4 bg-white rounded-4 shadow-sm border h-100 hover-lift">
+              <i class="fas fa-hand-holding-usd fa-2x text-success mb-3"></i>
+              <h5 class="fw-bold">Maximale Ersparnis</h5>
+              <p class="text-muted small mb-0">Durch Bündelung und Timing erzielen wir Bestpreise.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -104,30 +110,46 @@
       <h6 class="text-accent fw-bold text-uppercase mb-2">Unser Angebot</h6>
       <h2 class="fw-bold mb-3">Ganzheitliche Lösungen</h2>
     </div>
-    
+
     <div class="row g-3 justify-content-center">
-      <div class="col-md-4 reveal reveal-delay-1">
+      <div class="col-md-6 col-lg-3 reveal reveal-delay-1">
         <div class="card h-100 border-0 shadow-sm hover-lift transition rounded-4 text-center py-4 px-2">
-            <div class="mb-3 text-primary opacity-75"><i class="fas fa-bolt fa-3x"></i></div>
-            <h4 class="fw-bold text-nowrap" style="font-size: 1.15rem;">Energiebeschaffung</h4>
-            <p class="text-muted small">Strom- und Gaseinkauf zu optimalen Konditionen.</p>
-            <a href="{% url 'services' %}" class="btn btn-sm btn-outline-secondary border-0 rounded-pill mt-3 fw-bold text-dark bg-light">Details ansehen</a>
+          <div class="mb-3 text-primary opacity-75"><i class="fas fa-bolt fa-3x"></i></div>
+          <h4 class="fw-bold text-nowrap" style="font-size: 1.15rem;">Energiebeschaffung</h4>
+          <p class="text-muted small">Strom- und Gaseinkauf zu optimalen Konditionen.</p>
+          <a href="{% url 'services' %}"
+            class="btn btn-sm btn-outline-secondary border-0 rounded-pill mt-3 fw-bold text-dark bg-light">Details
+            ansehen</a>
         </div>
       </div>
-      <div class="col-md-4 reveal reveal-delay-2">
+      <div class="col-md-6 col-lg-3 reveal reveal-delay-2">
         <div class="card h-100 border-0 shadow-sm hover-lift transition rounded-4 text-center py-4 px-2">
-            <div class="mb-3 text-success opacity-75"><i class="fas fa-chart-pie fa-3x"></i></div>
-            <h4 class="fw-bold" style="font-size: 1.15rem;">Management</h4>
-            <p class="text-muted small">Verbrauchsanalysen und Effizienzsteigerung.</p>
-            <a href="{% url 'services' %}" class="btn btn-sm btn-outline-secondary border-0 rounded-pill mt-3 fw-bold text-dark bg-light">Details ansehen</a>
+          <div class="mb-3 text-success opacity-75"><i class="fas fa-chart-pie fa-3x"></i></div>
+          <h4 class="fw-bold" style="font-size: 1.15rem;">Management</h4>
+          <p class="text-muted small">Verbrauchsanalysen und Effizienzsteigerung.</p>
+          <a href="{% url 'services' %}"
+            class="btn btn-sm btn-outline-secondary border-0 rounded-pill mt-3 fw-bold text-dark bg-light">Details
+            ansehen</a>
         </div>
       </div>
-      <div class="col-md-4 reveal reveal-delay-3">
+      <div class="col-md-6 col-lg-3 reveal reveal-delay-3">
         <div class="card h-100 border-0 shadow-sm hover-lift transition rounded-4 text-center py-4 px-2">
-            <div class="mb-3 text-warning opacity-75"><i class="fas fa-file-invoice-dollar fa-3x"></i></div>
-            <h4 class="fw-bold" style="font-size: 1.15rem;">Audit</h4>
-            <p class="text-muted small">Rechnungsprüfung und Abgabenoptimierung.</p>
-            <a href="{% url 'services' %}" class="btn btn-sm btn-outline-secondary border-0 rounded-pill mt-3 fw-bold text-dark bg-light">Details ansehen</a>
+          <div class="mb-3 text-warning opacity-75"><i class="fas fa-file-invoice-dollar fa-3x"></i></div>
+          <h4 class="fw-bold" style="font-size: 1.15rem;">Audit</h4>
+          <p class="text-muted small">Rechnungsprüfung und Abgabenoptimierung.</p>
+          <a href="{% url 'services' %}"
+            class="btn btn-sm btn-outline-secondary border-0 rounded-pill mt-3 fw-bold text-dark bg-light">Details
+            ansehen</a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal reveal-delay-4">
+        <div class="card h-100 border-0 shadow-sm hover-lift transition rounded-4 text-center py-4 px-2">
+          <div class="mb-3 text-info opacity-75"><i class="fas fa-clipboard-check fa-3x"></i></div>
+          <h4 class="fw-bold" style="font-size: 1.15rem;">Energieaudits</h4>
+          <p class="text-muted small">Nach DIN EN 16247 für KMU & Nicht-KMU.</p>
+          <a href="{% url 'services' %}"
+            class="btn btn-sm btn-outline-secondary border-0 rounded-pill mt-3 fw-bold text-dark bg-light">Details
+            ansehen</a>
         </div>
       </div>
     </div>
@@ -136,20 +158,22 @@
 
 <!-- CTA Bar -->
 <section class="py-5 bg-dark text-white position-relative overflow-hidden reveal">
-    <!-- Subtle Gradient Overlay -->
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(90deg, rgba(5,150,105,0.2) 0%, rgba(15,23,42,0) 100%);"></div>
-    
-    <div class="container position-relative">
-        <div class="row align-items-center text-center text-lg-start">
-            <div class="col-lg-8 mb-4 mb-lg-0">
-                <h2 class="fw-bold mb-2 text-white">Bereit für niedrigere Energiekosten?</h2>
-                <p class="mb-0 text-white-50">Lassen Sie uns unverbindlich über Ihr Einsparpotenzial sprechen.</p>
-            </div>
-            <div class="col-lg-4 text-lg-end">
-                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold shadow-lg border-0">Jetzt anfragen</a>
-            </div>
-        </div>
+  <!-- Subtle Gradient Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100"
+    style="background: linear-gradient(90deg, rgba(5,150,105,0.2) 0%, rgba(15,23,42,0) 100%);"></div>
+
+  <div class="container position-relative">
+    <div class="row align-items-center text-center text-lg-start">
+      <div class="col-lg-8 mb-4 mb-lg-0">
+        <h2 class="fw-bold mb-2 text-white">Bereit für niedrigere Energiekosten?</h2>
+        <p class="mb-0 text-white-50">Lassen Sie uns unverbindlich über Ihr Einsparpotenzial sprechen.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg rounded-pill px-5 fw-bold shadow-lg border-0">Jetzt
+          anfragen</a>
+      </div>
     </div>
+  </div>
 </section>
 
 {% endblock %}
