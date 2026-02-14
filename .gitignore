@@ -13,3 +13,10 @@ staticfiles/
 .env
 venv/
 .venv/
+
+# IDE
+.idea/
+
+# Local SSL
+cert.crt
+cert.key

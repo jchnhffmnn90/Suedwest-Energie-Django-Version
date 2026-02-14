@@ -9,5 +9,7 @@ urlpatterns = [
     path('kontakt/', views.contact, name='contact'),
     path('impressum/', views.imprint, name='imprint'),
     path('datenschutz/', views.privacy, name='privacy'),
+    path('health/', views.health_check, name='health_check'),
+    path('status/', views.status_view, name='status'),
     path('agb/', views.terms, name='terms'),
 ]
