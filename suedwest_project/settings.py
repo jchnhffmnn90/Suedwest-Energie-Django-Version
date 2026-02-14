@@ -139,14 +139,13 @@ if DEBUG:
 LOGIN_URL = '/admin/login/'
 
 # Email Configuration
-# For development/testing: prints emails to console
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.example.com'  # Replace with real SMTP server later
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'user@example.com'
-EMAIL_HOST_PASSWORD = 'password'
-DEFAULT_FROM_EMAIL = 'noreply@suedwest-energie.de'
+EMAIL_BACKEND = os.getenv('DJANGO_EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend')
+EMAIL_HOST = os.getenv('DJANGO_EMAIL_HOST', 'smtp.example.com')
+EMAIL_PORT = int(os.getenv('DJANGO_EMAIL_PORT', 587))
+EMAIL_USE_TLS = os.getenv('DJANGO_EMAIL_USE_TLS', 'True') == 'True'
+EMAIL_HOST_USER = os.getenv('DJANGO_EMAIL_HOST_USER', 'user@example.com')
+EMAIL_HOST_PASSWORD = os.getenv('DJANGO_EMAIL_HOST_PASSWORD', 'password')
+DEFAULT_FROM_EMAIL = os.getenv('DJANGO_DEFAULT_FROM_EMAIL', 'noreply@suedwest-energie.de')
 
 # Security Settings for Production
 SECURE_SSL_REDIRECT = os.getenv('DJANGO_SECURE_SSL_REDIRECT', 'False') == 'True'

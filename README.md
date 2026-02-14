@@ -71,6 +71,26 @@ Ein Superuser für den Administrationsbereich (`/admin/`) und die Statusseite (`
 
 **Wichtig:** Ändern Sie das Passwort sofort, wenn Sie die Anwendung deployen!
 
+## 🚀 Produktion & Deployment
+
+Das Projekt ist für den produktiven Einsatz (z.B. auf einem VPS oder PaaS) vorbereitet.
+
+### Automatisierter Setup
+Nutzen Sie das bereitgestellte Deployment-Skript für die Vorbereitung:
+```bash
+chmod +x deploy.sh
+./deploy.sh
+```
+
+### Manuelle Schritte
+1.  **Umgebung:** Setzen Sie `DJANGO_DEBUG=False` in Ihrer `.env`.
+2.  **Statik:** Führen Sie `python manage.py collectstatic` aus (Whitenoise serviert diese).
+3.  **Server:** Starten Sie die Anwendung mit Gunicorn:
+    ```bash
+    gunicorn suedwest_project.wsgi:application
+    ```
+4.  **Reverse Proxy:** Konfigurieren Sie Nginx als Reverse Proxy vor Gunicorn.
+
 ## ✅ Tests
 
 Das Projekt verfügt über eine umfassende Testabdeckung (Views, Forms, Security).
