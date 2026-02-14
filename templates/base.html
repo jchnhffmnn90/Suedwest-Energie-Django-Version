@@ -190,22 +190,37 @@
       border: 1px solid #cbd5e1;
     }
 
-    /* --- Mobile Menu --- */
+    /* --- Mobile Menu & Layout Adjustments --- */
     @media (max-width: 991.98px) {
+      body {
+        padding-top: var(--navbar-height);
+      }
+      
+      .top-bar {
+        display: none;
+      }
+      
+      .navbar {
+        top: 0;
+      }
+      
       .navbar-collapse {
         position: absolute;
-        top: var(--navbar-height);
+        top: 100%;
         left: 0;
         right: 0;
         background-color: #ffffff;
         padding: 1.5rem;
         box-shadow: var(--shadow-lg);
         border-top: 1px solid #f1f5f9;
+        max-height: 85vh;
+        overflow-y: auto;
       }
 
       .navbar-nav .nav-link {
         border-bottom: 1px solid #f8fafc;
         padding: 1rem 0 !important;
+        font-size: 1.1rem;
       }
 
       .navbar-nav .nav-link::after {
@@ -213,8 +228,9 @@
       }
 
       .navbar-nav .btn {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         width: 100%;
+        padding: 1rem;
       }
     }
 
@@ -304,7 +320,7 @@
 <body>
 
   <!-- Top Bar -->
-  <div class="top-bar">
+  <div class="top-bar d-none d-lg-block">
     <div class="container d-flex justify-content-between align-items-center">
       <!-- Contact Left -->
       <div class="d-flex gap-4">
@@ -342,6 +358,12 @@
       <!-- Menu Items -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center gap-lg-3">
+          <!-- Mobile Contact Info -->
+          <li class="nav-item d-lg-none w-100 mb-3 pb-3 border-bottom text-center">
+             <a href="tel:+4917613427945" class="d-block py-2 text-decoration-none text-dark fw-bold"><i class="fas fa-phone text-accent me-2"></i> 0176 / 134 27 945</a>
+             <a href="mailto:kontakt@suedwest-energie.de" class="d-block py-2 text-decoration-none text-muted small"><i class="fas fa-envelope text-accent me-2"></i> Mail senden</a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
               href="{% url 'home' %}">STARTSEITE</a>
@@ -421,7 +443,7 @@
             <li class="d-flex gap-3">
               <i class="fas fa-map-marker-alt mt-1 text-accent"></i>
               <div>
-                <strong>Thomke & THomke GbR</strong><br>
+                <strong>Thomke & Thomke GbR</strong><br>
                 Im unteren Ried 15<br>
                 75382 Althengstett
               </div>
@@ -437,7 +459,7 @@
       <div class="border-top border-white border-opacity-10 mt-5 pt-4">
         <div class="row align-items-center text-center text-md-start">
           <div class="col-md-6">
-            <small class="text-white-50">&copy; {% now "Y" %} Thomke & THomke GbR. Alle Rechte vorbehalten.</small>
+            <small class="text-white-50">&copy; {% now "Y" %} Thomke & Thomke GbR. Alle Rechte vorbehalten.</small>
           </div>
         </div>
       </div>
